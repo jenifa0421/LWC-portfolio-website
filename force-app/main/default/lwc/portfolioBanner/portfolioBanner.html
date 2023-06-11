@@ -1,0 +1,24 @@
+<template>
+      <div class="banner">
+        <img class="photo"  src= "{userPic}">
+        <div class="slds-text-heading_large name">{name}</div>
+        <div class="slds-text-heading_medium designation">{designation} at {company}</div>
+        <div class="slds-text-heading_medium location">{location}</div>
+        <div>
+            <template if:true={linkedInUrl}>
+                <a href= "{linkedInUrl}" target="_blank">
+                    <img  class= "social-icon" src= "{linkedIn}" alt="">
+                </a>
+            </template>
+            <template if:true={trailheadUrl}>
+                <a href= "{trailheadUrl}" target="_blank">
+                    <img class= "social-icon" src= "{trailhead}" alt="">
+                </a>
+            </template>
+            
+          </div>
+      </div>
+     
+      
+       
+</template>

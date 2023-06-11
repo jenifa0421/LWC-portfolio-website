@@ -1,0 +1,23 @@
+.banner{    
+    background-color : lightcyan;
+    
+    padding : 32px 16px;
+    min-height: 400px;
+    text-align :center;
+}
+.photo{
+    height: 160px;
+    width : 160px;
+    border-radius: 50%;
+}
+.name{
+    color :blue
+}
+.designation, .location{
+    color :indigo
+}
+.social-icon{
+    height: 50px;
+    width : 50px;
+    margin: 15px 15px 0px 0px;
+}

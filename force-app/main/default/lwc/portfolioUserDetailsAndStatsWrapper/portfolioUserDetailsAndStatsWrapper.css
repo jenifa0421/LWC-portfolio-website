@@ -1,0 +1,11 @@
+.user-details{
+    background-color: powderblue;
+    padding: 17px;
+}
+@media (max-width:720px) {
+    .user-details{
+        text-align: center;
+    }
+    
+
+}

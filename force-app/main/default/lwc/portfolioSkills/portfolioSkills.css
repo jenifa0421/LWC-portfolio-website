@@ -1,0 +1,12 @@
+.skills{
+    width : 100%;
+    background-color: darkturquoise;
+    color: black;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+.slds-badge{
+    --slds-c-badge-color-background :lightblue;
+    --slds-c-badge-font-size:1 rem;
+    --slds-c-badge-text-color:black;
+}

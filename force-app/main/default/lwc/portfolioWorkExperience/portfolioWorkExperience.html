@@ -1,0 +1,64 @@
+<template>
+    <ul class="slds-timeline">
+        <template for:each={workExperienceList} for:item='wExp'>
+            
+        <li key={wExp.id}>
+        <div class="slds-timeline__item_expandable slds-timeline__item_task slds-is-open">
+       
+        <div class="slds-media">
+        <div class="slds-media__figure">
+        <button class="slds-button slds-button_icon" >
+            <lightning-icon icon-name='utility:switch' alternative-text='switch'  size='x-small' title='switch'></lightning-icon>
+        </button>
+        <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon" title="task">
+            <lightning-icon icon-name='standard:task' alternative-text='task' size='small' title='task'></lightning-icon>
+        </div>
+        </div>
+        <div class="slds-media__body">
+        <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+        <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+        
+      
+            <h3 class="slds-truncate" title= {wExp.role}>
+       
+                <strong>{wExp.role}</strong>
+                
+                </h3>
+        </div>
+        <div class="slds-timeline__actions slds-timeline__actions_inline">
+            <template if:true={wExp.isCurrent}>
+                <p class="slds-timeline__date">{wExp.startDate} - Current</p>
+            </template>
+            <template if:false={wExp.isCurrent}>
+                <p class="slds-timeline__date">{wExp.startDate} - {wExp.endDate}</p>
+            </template>
+        
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More Options for this item">
+        <svg class="slds-button__icon" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+        </svg>
+        <span class="slds-assistive-text">More Options for this item</span>
+        </button>
+        </div>
+        </div>
+        <p class="slds-m-horizontal_xx-small">
+        {wExp.companyName} , {wExp.location}
+        </p>
+        <article class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium" id="task-item-expanded" aria-hidden="false">
+        
+        <div>
+            
+           <c-portfolio-string-to-html content={wExp.description}></c-portfolio-string-to-html>
+        </div>
+        </article>
+        </div>
+        </div>
+        </div>
+        </li>
+       
+        
+    </template>
+</ul>
+
+
+</template>

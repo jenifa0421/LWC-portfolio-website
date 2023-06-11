@@ -1,0 +1,25 @@
+img{
+    height: 60px;
+    margin-right: 10px;
+}
+.cert-box{
+background-color:lightskyblue;
+padding: 12px;
+border-radius: 5px;
+font-size: 20px;
+display: flex;
+align-items: center;
+justify-content: left;
+}
+.skills{
+    width: 100%;
+    background-color:darkturquoise;
+    border-radius: 5px;
+    padding: 8px 16px;
+    padding: 5px 5px;
+    color : black;
+}
+.cert-box:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+}
